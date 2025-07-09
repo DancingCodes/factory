@@ -1,31 +1,33 @@
 <template>
-    <div class="Footer">
-        <div class="comInfo">
-            <div class="company">
-                <img src="@/assets/logo.png">
-                <span>无极工厂</span>
+    <div class="flex gap-0.1rem bg-#3a3a3a py-0.16rem px-0.5rem box-border color-#fff">
+        <div>
+            <div class="flex items-center gap-0.05rem">
+                <img src="@/assets/images/logo.png" class="h-0.4rem">
+                <span class="text-0.16rem font-bold tracking-0.01rem">无极工厂</span>
             </div>
-
-            <div class="OtherInfo">
-                <div>公司地址</div>
-                <span>西虹市高新区飞跃路极心创意园1号楼</span>
+            <div class="mt-0.2rem flex flex-col gap-0.01rem text-0.09rem">
+                <div class="color-#9d9d9d">公司地址</div>
+                <span class="color-#fff">西虹市高新区飞跃路极心创意园1号楼</span>
             </div>
-
-            <div class="OtherInfo">
-                <div>全国服务电话</div>
-                <span>0555-77777777</span>
+            <div class="mt-0.14rem flex flex-col gap-0.01rem text-0.09rem">
+                <div class="color-#9d9d9d">全国服务电话</div>
+                <span class="color-#fff">0555-77777777</span>
             </div>
-
         </div>
 
-        <div class="navList">
-            <div class="navItem" v-for="i in navList">
-                <div class="navTitle">{{ i.title }}</div>
-                <div class="navRows">
-                    <div v-for="r in i.rows">{{ r.label }}</div>
+        <div class="flex-1 flex justify-end gap-0.4rem">
+            <div v-for="i in navList">
+                <div class="text-0.1rem">{{ i.title }}</div>
+                <div class="color-#9d9d9d text-0.09rem">
+                    <div v-for="r in i.rows" class="mt-0.08rem cursor-pointer">{{ r.label }}</div>
                 </div>
             </div>
         </div>
+    </div>
+    <div
+        class="flex items-center justify-between color-#9d9d9d text-0.09rem bg-#353535 py-0.09rem px-0.5rem box-border">
+        <div>鲁ICP备00000001号-2 无极集团版权所有 鲁公网安备 55555777779999号</div>
+        <div class="flex gap-0.01re,">人才专区<span>·</span>联系我们<span>·</span>法律申明<span>·</span>友情链接</div>
     </div>
 </template>
 <script setup>
@@ -73,69 +75,3 @@ const navList = [{
 
 
 </script>
-<style scoped lang="scss">
-.Footer {
-    background-color: #3a3a3a;
-    padding: 20px 120px;
-    box-sizing: border-box;
-    display: flex;
-    gap: 80px;
-
-    .comInfo {
-        .company {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 26px;
-            letter-spacing: 2px;
-            font-weight: bold;
-
-            img {
-                height: 50px;
-                display: block;
-            }
-        }
-
-        .OtherInfo {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-
-            div {
-                color: #9d9d9d;
-                font-size: 13px;
-            }
-
-            span {
-                font-size: 15px;
-            }
-        }
-
-    }
-
-    .navList {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-        gap: 80px;
-
-        .navItem {
-            .navTitle {
-                font-size: 15px;
-            }
-
-            .navRows {
-                color: #9d9d9d;
-                font-size: 13px;
-                margin-top: 8px;
-                cursor: pointer;
-
-                &>div:not(:first-child) {
-                    padding-top: 4px;
-                }
-            }
-        }
-    }
-}
-</style>

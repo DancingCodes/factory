@@ -1,12 +1,9 @@
 <template>
-    <NavBar />
-    <router-view />
-    <Footer />
-    <Record />
+    <div class="min-h-100vh flex flex-col">
+        <NavBar />
+        <div class="flex-1">
+            <router-view />
+        </div>
+        <Footer />
+    </div>
 </template>
-<script setup>
-import NavBar from "@/components/NavBar/index.vue";
-import Footer from "@/components/Footer/index.vue";
-import Record from "@/components/Record/index.vue";
-</script>
-<style scoped lang="scss"></style>

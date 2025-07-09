@@ -1,0 +1,22 @@
+html {
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
