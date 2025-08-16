@@ -32,15 +32,6 @@
 </template>
 <script setup>
 const navList = [{
-    title: '关于我们',
-    rows: [{
-        label: '关于我们'
-    }, {
-        label: '关于我们'
-    }, {
-        label: '关于我们'
-    }]
-}, {
     title: '产品中心',
     rows: [{
         label: '产品中心'
@@ -59,17 +50,6 @@ const navList = [{
         label: '新闻动态'
     }, {
         label: '新闻动态'
-    }]
-}, {
-    title: '联系我们',
-    rows: [{
-        label: '联系我们'
-    }, {
-        label: '联系我们'
-    }, {
-        label: '联系我们'
-    }, {
-        label: '联系我们'
     }]
 }]
 

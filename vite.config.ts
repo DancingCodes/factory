@@ -26,11 +26,11 @@ export default defineConfig({
     port: 8080,
     host: '0.0.0.0',
     proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:3002',
+      '/dev-api': {
+        target: 'http://127.0.0.1:3003',
         // target: 'https://music.moonc.love/api',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: (path) => path.replace(/^\/dev-api/, '')
       },
     }
   },

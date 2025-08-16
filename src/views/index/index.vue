@@ -81,28 +81,36 @@
 
 </template>
 <script setup>
+import { getNewsList } from '@/api/news'
+
 const videoAddress = ref('https://filestore.moonc.love/uploadFiles/1747226220892-238510587.mp4')
 
 const categoryList = ref([{
     title: '产品A',
-    icon: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_06.png',
+    icon: 'https://filestore.moonc.love/uploadFiles/1752041851203-58432246.png',
     describe: '产品A的描述',
-    bgi: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_01.webp'
+    bgi: 'https://filestore.moonc.love/uploadFiles/1752041885289-101930697.webp'
 }, {
     title: '产品B',
-    icon: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_07.png',
+    icon: 'https://filestore.moonc.love/uploadFiles/1752041860630-656407135.png',
     describe: '产品B的描述',
-    bgi: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_02.webp'
+    bgi: 'https://filestore.moonc.love/uploadFiles/1752041892770-904718289.webp'
 }, {
     title: '产品C',
-    icon: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_08.png',
+    icon: 'https://filestore.moonc.love/uploadFiles/1752041868959-365182398.png',
     describe: '产品C的描述',
-    bgi: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_03.webp'
+    bgi: 'https://filestore.moonc.love/uploadFiles/1752041901202-311660492.webp'
 }, {
     title: '产品D',
-    icon: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_09.png',
+    icon: 'https://filestore.moonc.love/uploadFiles/1752041875581-931512488.png',
     describe: '产品D的描述',
-    bgi: 'http://www.fufeng-group.com/statics/web/fer/upimg/in_04.webp'
+    bgi: 'https://filestore.moonc.love/uploadFiles/1752041908251-304246294.webp'
 }])
 const hoverIndex = ref(0)
+
+
+onMounted(() => {
+    getNewsList()
+})
+
 </script>
